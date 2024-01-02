@@ -1,6 +1,6 @@
 <?php
 
-
+dd('Hola mundo');
 
 $greeting = 'Hola mundo';
 

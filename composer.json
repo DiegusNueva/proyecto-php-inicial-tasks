@@ -1,0 +1,19 @@
+{
+    "name": "diego/php8",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Diego Alonso Molina",
+            "email": "diegoalonso@tuniversformacion.es"
+        }
+    ],
+    "require": {}, 
+    "autoload": {
+        "classmap": [
+            "./"
+        ],
+        "files": [
+            "functions.php"
+        ]
+    }
+}
