@@ -1,7 +1,5 @@
 <?php
 
-dd('Hola mundo');
-
 $greeting = 'Hola mundo';
 
 $tasks = Task::all();
