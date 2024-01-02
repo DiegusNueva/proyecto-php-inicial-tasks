@@ -66,7 +66,7 @@ class Model
     {
 
         if (empty($this->table)) {
-            throw new Exception("El nombre de la tabla no se ha definido.");
+            throw new \Exception("El nombre de la tabla no se ha definido.");
         }
 
         App::get('database')->create($this->table, $this->properties);
