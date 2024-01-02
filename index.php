@@ -3,7 +3,8 @@ require "vendor/autoload.php";
 require 'Core/bootstrap.php';
 $routes = require('routes.php');
 
-
+use Core\Request;
+use Core\Router;
 
 $url = Request::url();
 
