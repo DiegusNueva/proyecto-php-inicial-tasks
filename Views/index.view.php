@@ -14,13 +14,11 @@
     <?php foreach ($completedTasks as $task) : ?>
         <li style="color: <?= $task->color ?>">
             <?= $task->title ?>
-            <form style="display: inline" action="tasks/toggle" method="POST">
+            <form style="display: inline" action="tasks/toggle/<?= $task->id ?>" method="POST">
                 <input type="hidden" name="completed" value="0">
-                <input type="hidden" name="id" value="<?= $task->id ?>">
                 <button type="submit">&#x2796</button>
             </form>
-            <form onsubmit="return confirm('¿Estás seguro de eliminar el registro?');" style="display: inline" action="tasks/delete" method="POST">
-                <input type="hidden" name="id" value="<?= $task->id ?>">
+            <form onsubmit="return confirm('¿Estás seguro de eliminar el registro?');" style="display: inline" action="tasks/delete/<?= $task->id ?>" method="POST">
                 <button type="submit">&#x274c</button>
             </form>
         </li>
@@ -32,13 +30,11 @@
     <?php foreach ($pendingTasks as $task) : ?>
         <li style="color: <?= $task->color ?>">
             <?= $task->title ?>
-            <form style="display: inline" action="tasks/toggle" method="POST">
+            <form style="display: inline" action="tasks/toggle/<?= $task->id ?>" method="POST">
                 <input type="hidden" name="completed" value="1">
-                <input type="hidden" name="id" value="<?= $task->id ?>">
                 <button type="submit">&#x2705</button>
             </form>
-            <form onsubmit="return confirm('¿Estás seguro de eliminar el registro?');" style="display: inline" action="tasks/delete" method="POST">
-                <input type="hidden" name="id" value="<?= $task->id ?>">
+            <form onsubmit="return confirm('¿Estás seguro de eliminar el registro?');" style="display: inline" action="tasks/delete/<?= $task->id ?>" method="POST">
                 <button type="submit">&#x274c</button>
             </form>
         </li>
