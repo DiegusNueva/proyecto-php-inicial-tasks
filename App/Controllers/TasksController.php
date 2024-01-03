@@ -18,7 +18,7 @@ class TasksController
     {
 
         $task = Task::find($taskId);
-
+        
         $task->update(['completed' => $_POST['completed']]);
 
         return redirect('/');
